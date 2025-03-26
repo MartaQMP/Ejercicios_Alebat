@@ -9,19 +9,20 @@ type Bird = Animal & {
   canFly: boolean;
 };
 
+type Race = "Labrador" | "Husky" | "Chucho";
+
 type Dog = Animal & {
-  race: "Labrador" | "Husky" | "Chucho";
+  race: Race;
   age: number;
 };
 
-type Cat = Animal &
-  Pick<Animal, "name"> & {
-    color: string;
-  };
+type Cat = Pick<Animal, "name" | "canSleep"> & {
+  color: string;
+};
 
-type Snake = Animal & Omit<Animal, "name">;
+type Snake = Omit<Animal, "name">;
 
-const dog: Dog = {
+const Dog: Dog = {
   name: "nombre",
   canDrink: true,
   canEat: true,
@@ -29,12 +30,13 @@ const dog: Dog = {
   race: "Husky",
   age: 10,
 };
-const bird: Bird = {
+const Bird: Bird = {
   name: "nombre",
   canDrink: true,
   canEat: true,
   canSleep: true,
   canFly: true,
 };
-//const cat: Cat = { name: "nombre", color: "white" };
-//const snake: Snake = { canDrink: true, canEat: true, canSleep: true };
+
+const Cat: Cat = { name: "nombre", canSleep: true, color: "white" };
+const Snake: Snake = { canDrink: true, canEat: true, canSleep: true };
