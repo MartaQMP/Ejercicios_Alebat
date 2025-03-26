@@ -1,0 +1,5 @@
+/*1*/
+Camel case: userName --> para metodos, variables...
+Kebab case: user-name -->
+Snake case: user_name -->
+Pascal case: UserName --> para clases
