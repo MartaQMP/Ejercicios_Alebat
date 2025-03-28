@@ -1,0 +1,6 @@
+/*1*/
+http://localhost:1337/api/teachers?filters[events][Tittle][$contains]=evento-2&populate[events][fields][3]=Description
+/*2*/
+http://localhost:1337/api/events?populate=Event_details&filters[Event_details][Date][$contains]=2025-03-30
+/*3*/
+http://localhost:1337/api/events?populate[modelEvent][on][components-events.url-list][populate]=*&populate[modelEvent][on][components-events.gallery-images][populate]=*&populate[modelEvent][on][components-events.component][populate]=*
